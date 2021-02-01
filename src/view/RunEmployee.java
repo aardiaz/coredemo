@@ -3,6 +3,7 @@ package view;
 import java.util.List;
 import java.util.Scanner;
 
+import model.CompareEmp;
 import model.Employee;
 import service.EmployeeService;
 import service.EmployeeServiceImpl;
@@ -11,17 +12,27 @@ public class RunEmployee {
 
 	public static void main(String[] args) {
 		
-		EmployeeService es = new EmployeeServiceImpl();
-		Scanner sc  = new Scanner(System.in);
 		
-		//============== add employee =========================
-				addEmp(es, sc);
-
-		//========== display all employee data =================
-				getAll(es);
+		Employee  e1 = new Employee();
+		e1.setFname("ram");
 		
-		//============== delete employee data ==================
-				deleteEmp(es, sc);
+		Employee  e2 = new Employee();
+		e2.setFname("ram");
+		
+	System.out.println(new CompareEmp().compare(e1, e2));
+		
+		
+//		EmployeeService es = new EmployeeServiceImpl();
+//		Scanner sc  = new Scanner(System.in);
+//		
+//		//============== add employee =========================
+//				addEmp(es, sc);
+//
+//		//========== display all employee data =================
+//				getAll(es);
+//		
+//		//============== delete employee data ==================
+//				deleteEmp(es, sc);
 
 	}
 
